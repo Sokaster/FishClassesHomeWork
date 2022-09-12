@@ -1,0 +1,25 @@
+﻿@model List<Fish>;
+
+@{
+    int weight = ViewBag.Weight;
+    var name = ViewData["Name"] as string;
+
+    var modelList = @Model;
+    modelList[0].Name = name;
+    modelList[modelList.Count - 1].Weight = weight;
+}
+
+<h1>
+    FISH LIST BY USING MODEL!!!!!!
+</h1>
+
+<ul>
+    @foreach(Fish fish in @Model)
+    {
+        <li>
+            <p>Name: @fish.Name</p>
+            <p>Speed: @fish.Speed</p>
+            <p>Weight: @fish.Weight</p>
+        </li>
+    }
+</ul>

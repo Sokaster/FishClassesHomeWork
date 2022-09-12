@@ -1,0 +1,27 @@
+﻿@{
+    var fishlist = ViewData["FishList"] as List<Fish>;
+}
+<h1>
+    VIEWDATA PROCESS IS HERE!!!!!!
+</h1>
+<ul>
+    @if (fishlist == null)
+    {
+        <li>Have no Data Found</li>
+    }
+    else
+    {
+        @foreach (Fish fish in fishlist)
+        {
+            <li>
+                <p>Name: @fish.Name</p>
+                <p>Speed: @fish.Speed</p>
+                <p>Weight: @fish.Weight</p>
+            </li>
+        }
+
+    }
+
+
+
+</ul>

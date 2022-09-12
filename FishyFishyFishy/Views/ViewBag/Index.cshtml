@@ -1,0 +1,18 @@
+﻿@{
+    List<Fish> fishList = ViewBag.FishList;
+}
+
+<h1>
+    VIEWBAG PROCESS IS HERE!!!!!!!!
+</h1>
+<ul>
+    @foreach(Fish fish in fishList)
+    {
+        <li>
+            <p>Name: @fish.Name</p>
+            <p>Speed: @fish.Speed</p>
+            <p>Weight: @fish.Weight</p>
+        </li>
+    }
+
+</ul>
